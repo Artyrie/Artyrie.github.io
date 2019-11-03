@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PR TypeScript"
+title:  "TypeScript_PR"
 date:   2019-11-04
 excerpt: "Pr_TypeScript Repository. Read more information Posts."
 project: true

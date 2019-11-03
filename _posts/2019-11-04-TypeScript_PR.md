@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Type Script PR"
+title:  PR_Type Script
 date:   2019-11-04
 excerpt: "Just about TypeScript Practice"
 tag:

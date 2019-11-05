@@ -8,22 +8,27 @@ tag:
 comments: true
 ---
 
-## Type Script Practice
+# Type Script Practice
+
 Use Type Script debugger by <a href="https://github.com/Enterprise-JS/vscode-ts-node-debugging">vscode-ts-code-debugging</a><br>
 Code and Explanation is in.<br>
 Is is refered <a href="https://www.youtube.com/playlist?list=PLlSZlNj22M7QxeiQkge94penoAixMJMMF">Team Jupeter</a><br>
 
-#### 1st Class and Calling
-<ul>
-<li>Class_Call : index.ts<br>{% highlight typescript %}
+## 1st Class and Calling
+
+	•	Class_Call : index.ts
+
+{% highlight typescript %}
 import { Person } from './person';
 
 let person = new Person('Bob', 34);
 
 console.log(person.getGreeting());
-{% endhighlight %}</li>
+{% endhighlight %}
 
-<li>Class : person.ts<br>{% highlight typescript %}
+	•	Class : person.ts
+
+{% highlight typescript %}
 export class Person {
 
     constructor(
@@ -36,12 +41,13 @@ export class Person {
     }
 
 }
-{% endhighlight %}</li>
-</ul>
+{% endhighlight %}
 
-#### 2nd Hello World
-<ul>
-<li>Hello TypeScipt : index.ts<br>{% highlight typescript %}
+## 2nd Hello World
+
+	•	 Hello TypeScipt : index.ts
+
+{% highlight typescript %}
 class Greeting {
     greet():void {
         console.log("Hello Type Script!!")
@@ -51,12 +57,13 @@ class Greeting {
 var obj = new Greeting();
 obj.greet();
 {% endhighlight %}
-</li>
-</ul>
 
-#### 3rd Scope
-<ul>
-<li>Scope : index.ts<br>{% highlight typescript %}
+
+## 3rd Scope
+
+	•	Scope : index.ts
+
+{% highlight typescript %}
 // global variable
 var global_num = 12;
 
@@ -82,23 +89,25 @@ var objs = new Numbers();
 console.log("Class num: " + objs.num_val);
 // Error : obj.sval
 {% endhighlight %}
-</li>
-</ul>
 
-#### 4th Conditional
-<ul>
-<li>Conditional : index.ts<br>{% highlight typescript %}
+
+## 4th Conditional
+
+	•	Conditional : index.ts
+    
+{% highlight typescript %}
 var num:number = -2;
 // conditional
 var result:string = num > 0 ?"positive":"non-positive";
 console.log(result)
 {% endhighlight %}
-</li>
-</ul>
+
 
 #### 5th Loops
-<ul>
-<li>Loops : index.ts<br>{% highlight typescript %}
+
+	•	Loops : index.ts
+
+{% highlight typescript %}
 var i:number = 1;
 
 while (i <= 10) {
@@ -128,12 +137,13 @@ for(num=0; num<=20; num++){
 }
 console.log(" The count of odd values between 0 and 20 is : " + count);
 {% endhighlight %}
-</li>
-</ul>
 
-#### 6th Variable
-<ul>
-<li>Variable : index.ts<br>{% highlight typescript %}
+
+## 6th Variable
+
+	•	Variable : index.ts
+    
+{% highlight typescript %}
 // Type Script variable is let not Var!!!
 let fullName: string = 'Artyrie';
 let age: number = 23;
@@ -149,12 +159,13 @@ I'll be ${ age + 1 } years old next month.`;
 
 console.log(sentence);
 {% endhighlight %}
-</li>
-</ul>
 
-#### 7th Function
-<ul>
-<li>Function : index.ts<br>{% highlight typescript %}
+
+## 7th Function
+
+	•	Function : index.ts
+
+{% highlight typescript %}
 function disp_details(id:number, name:string, mail_id?:string): void {
     
     console.log("ID:", id);
@@ -170,12 +181,13 @@ function disp_details(id:number, name:string, mail_id?:string): void {
 disp_details(123, "John");
 disp_details(111, "mary", "mary@xyz.com");
 {% endhighlight %}
-</li>
-</ul>
 
-#### 8th Interface
-<ul>
-<li>Interface : index.ts<br>{% highlight typescript %}
+
+## 8th Interface
+
+	•	Interface : index.ts
+    
+{% highlight typescript %}
 // user defined data type
 interface LabelledValue {
     label: string;
@@ -225,12 +237,13 @@ console.log(mySquare.color);
 // return default value area: 100
 console.log(mySquare.area);
 {% endhighlight %}
-</li>
-</ul>
 
-#### 9th Class basic
-<ul>
-<li>Class : index.ts<br>{% highlight typescript %}
+
+## 9th Class basic
+
+	•	Class : index.ts
+    
+{% highlight typescript %}
 // class has Capital first alphabet
 class Greeter {
     greeting: string;
@@ -249,12 +262,13 @@ let greeter = new Greeter("World!");
 console.log(greeter.greet());
 console.log(greeter.greeting);
 {% endhighlight %}
-</li>
-</ul>
 
-#### 10th Inheritance Class
-<ul>
-<li>Inheritance Class : index.ts<br>{% highlight typescript %}
+
+## 10th Inheritance Class
+
+	•	Inheritance Class : index.ts
+    
+{% highlight typescript %}
 class Animal {
     name: string;
     constructor(theName: string) {
@@ -296,12 +310,13 @@ console.log(dog2.name);
 console.log(dog2.move(10));
 console.log("3rd end");
 {% endhighlight %}
-</li>
-</ul>
 
-#### 11th Type; Public, Private, Protected
-<ul>
-<li>Type; Public, Private, Protected : index.ts<br>{% highlight typescript %}
+
+## 11th Type; Public, Private, Protected
+
+	•	Type; Public, Private, Protected : index.ts
+
+{% highlight typescript %}
 class Animals {
     // protected name: string => Only use in class and Inhertied class
     protected name: string;
@@ -353,12 +368,13 @@ class Employee extends Persons {
 let howard = new Employee("Howard", "Sales");
 console.log(howard.getElevatorPtich());
 {% endhighlight %}
-</li>
-</ul>
 
-#### 12th Getter Setter Method
-<ul>
-<li>Getter Setter Method : index.ts<br>{% highlight typescript %}
+
+## 12th Getter Setter Method
+
+	•	Getter Setter Method : index.ts
+
+{% highlight typescript %}
 let passcode = "secret passcode";
 
 class Employees {
@@ -388,13 +404,13 @@ employee.fullName = "Bob Smith";
 
 console.log(employee.fullName);
 {% endhighlight %}
-</li>
-</ul>
 
-#### 13th StaticProperty
-<ul>
-<li>StaticProperty
-<ul> : index.ts<br>{% highlight typescript %}
+
+## 13th StaticProperty
+
+	•	StaticProperty : index.ts
+    
+{% highlight typescript %}
 // Using interface is formal way.
 
 //interface Point {
@@ -424,12 +440,13 @@ let grid2 = new Grid(5.0);
 console.log(grid1.calculateDistanceFromOrigin({x: 10, y: 10}));
 console.log(grid2.calculateDistanceFromOrigin({x: 40, y: 50}));
 {% endhighlight %}
-</li>
-</ul>
 
-#### 14th AbstractClass
-<ul>
-<li>AbstractClass : index.ts<br>{% highlight typescript %}
+
+## 14th AbstractClass
+
+	•	AbstractClass : index.ts
+    
+{% highlight typescript %}
 // Doesn't make instance and implement
 // implement => Action of function.
 // Thus don't declare implement in function.
@@ -470,12 +487,13 @@ department.printMeeting();
 //Error
 //department.generatingReports();
 {% endhighlight %}
-</li>
-</ul>
 
-#### 15th Function Type
-<ul>
-<li>Function Type : index.ts<br>{% highlight typescript %}
+
+## 15th Function Type
+
+	•	Function Type : index.ts
+    
+{% highlight typescript %}
 // function add(x: any, y: any) {
 // any type is used by all type.
 // but it destoryed typescript's goodness.
@@ -494,12 +512,13 @@ let myAdd = function(x: number, y: number) {
 };
 console.log(myAdd(2, 3));
 {% endhighlight %}
-</li>
-</ul>
 
-#### 16th Optional Parameter
-<ul>
-<li>Optional Parameter : index.ts<br>{% highlight typescript %}
+
+## 16th Optional Parameter
+
+	•	Optional Parameter : index.ts
+    
+{% highlight typescript %}
 // lastName? <- optional parameter.
 // Exits or none. all possible.
 
@@ -526,12 +545,13 @@ console.log(result1);
 let employeeName = buildNames("Joseph", "Samuel", "Lucas");
 console.log(employeeName);
 {% endhighlight %}
-</li>
-</ul>
 
-#### 17th Generics
-<ul>
-<li>Generics : index.ts<br>{% highlight typescript %}
+
+## 17th Generics
+
+	•	Generics : index.ts
+    
+{% highlight typescript %}
 // Use Generic for use more 2 function's type.
 // Thus T, we can use String type and Number
 function identity<T>(arg: T): T {
@@ -546,12 +566,13 @@ console.log(output);
 console.log(output2);
 console.log(output3);
 {% endhighlight %}
-</li>
-</ul>
 
-#### 18th Enum
-<ul>
-<li>Enum : index.ts<br>{% highlight typescript %}
+
+## 18th Enum
+
+	•	Enum : index.ts
+    
+{% highlight typescript %}
 // to use not value, use word (Constance)
 // instead number, use word
 
@@ -564,12 +585,13 @@ enum Driection {
 
 console.log(Driection.Left);
 {% endhighlight %}
-</li>
-</ul>
 
-#### 4th Iterators for List
-<ul>
-<li>Iterators for List : index.ts<br>{% highlight typescript %}
+
+## 4th Iterators for List
+
+	•	Iterators for List : index.ts
+    
+{% highlight typescript %}
 let list = [4, 5, 6];
 
 // index number
@@ -582,12 +604,13 @@ for (let i of list) {
     console.log(i); // "4", "5", "6"
 }
 {% endhighlight %}
-</li>
-</ul>
 
-#### 20th Module; Import and Export
-<ul>
-<li>Module; Import and Export : index.ts<br>{% highlight typescript %}
+
+## 20th Module; Import and Export
+
+	•	Module; Import and Export : index.ts
+    
+{% highlight typescript %}
 // Global value => Module value
 // validate is maden function name
 import validate from "./StaticZipCodeValidator";
@@ -598,9 +621,10 @@ strings.forEach(s => {
     console.log(`"${s}" ${validate(s) ? "matches" : "does not match"}`);
 });
 {% endhighlight %}
-</li>
 
-<li>Module; Import and Export : StaticZipCodeValidator.ts<br>{% highlight typescript %}
+## Module; Import and Export : StaticZipCodeValidator.ts
+    
+{% highlight typescript %}
 const numberRegexp = /^[0-9]+$/;
 
 // export : in this function -> other module(other file and program) can use.
@@ -613,12 +637,13 @@ export default function (s: string) {
     return s.length === 5 && numberRegexp.test(s);
 }
 {% endhighlight %}
-</li>
-</ul>
 
-#### 21th Namespaces
-<ul>
-<li>Namespaces : StaticZipCodeValidator.ts<br>{% highlight typescript %}
+
+## 21th Namespaces
+
+	•	Namespaces : StaticZipCodeValidator.ts
+    
+{% highlight typescript %}
 interface StringValidator {
     isAcceptable(s: string): boolean;
 }
@@ -658,9 +683,11 @@ for (let s of strings) {
     }
 }
 {% endhighlight %}
-</li>
 
-<li>Namespaces : StaticZipCodeValidator2.ts<br>{% highlight typescript %}
+
+## Namespaces : StaticZipCodeValidator2.ts
+    
+{% highlight typescript %}
 // Reduce confused big program
 namespace Validation {
     export interface StringValidators {
@@ -698,5 +725,4 @@ for (let s of stringss) {
     }
 }
 {% endhighlight %}
-</li>
-</ul>
+

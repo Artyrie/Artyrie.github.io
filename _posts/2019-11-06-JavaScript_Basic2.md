@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  JavaScript_Basic2
-date:   2019-11-04
+date:   2019-11-06
 excerpt: "About JavaScript Basic Syntax"
 tag:
 - Java Script

@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  JavaScript_Basic
+title:  "JavaScript Basic"
 date:   2019-11-05
-excerpt: "About JavaScript Basic Syntax"
+excerpt: "Just about JavaScript Practice"
 tag:
 - Java Script
 comments: true
 ---
+
 # JavaScript
 
 	•	This page is my note about javascript.

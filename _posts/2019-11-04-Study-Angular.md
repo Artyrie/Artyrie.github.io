@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Angular Note
+title:  "Angular Note"
 date:   2019-11-04
 excerpt: "Note for Angular"
 tag:

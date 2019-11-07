@@ -417,3 +417,185 @@ Define property of object in constructor 'new'. <br>
 So, we can recycle this code. <br><br>
 Global object is property of window property. <br>
 `window.func();` can execute.
+
+## Special property of this object
+
+{% highlight javascript %}
+var funcThis = null; 
+function Func(){
+    funcThis = this;
+}
+var o1 = Func();
+if(funcThis === window){
+    document.write('window <br />');
+}
+var o2 = new Func();
+if(funcThis === o2){
+    document.write('o2 <br />');
+}
+//window
+//o2
+{% endhighlight %}
+
+This depends on your code that It indicates what. <br>
+So when the function called, this indicates window object. <br>
+But method of this indicates it's object. <br>
+
+## Function has method from the first
+
+Every function has method that is not written by user. <br>
+Note important 3 method.
+
+	•	call
+	•	bind
+	•	method
+
+{% highlight javascript %}
+var example = function (a, b, c) {
+  return a + b + c;
+};
+example(1, 2, 3);
+example.call(null, 1, 2, 3);
+example.apply(null, [1, 2, 3]);
+{% endhighlight %}
+
+These are ways that calls function. <br>
+Argument `null` alternate `this` <br>
+What is different that calling function is on code.
+
+{% highlight javascript %}
+var obj = {
+  string: 'zero',
+  yell: function() {
+    alert(this.string);
+  }
+};
+var obj2 = {
+  string: 'what?'
+};
+obj.yell(); // 'zero';
+obj.yell.call(obj2); // 'what?'
+{% endhighlight %}
+
+Use call with `obj2`, this of this becomes obj2. <br>
+Thus prints what? <br>
+
+### It can use function of the other object.
+
+Where we use it? <br>
+When arguments is controlled, we need it. <br>
+Arguments is similar to array, explained before.
+
+{% highlight javascript %}
+function example3() {
+  console.log(Array.prototype.join.call(arguments));
+}
+example3(1, 'string', true); // '1,string,true'
+{% endhighlight %}
+
+It can use this way. <br>
+Arguments is not array. So, use this way. <br>
+More information : <a href="https://www.zerocho.com/category/JavaScript/post/57433645a48729787807c3fd">Zerocho</a>
+
+
+<hr>
+
+
+## Inheritance
+
+### Prototype
+
+
+{% highlight javascript %}
+function Ultra(){}
+Ultra.prototype.ultraProp = true; 
+function Super(){}
+Super.prototype = new Ultra();
+function Sub(){}
+Sub.prototype = new Super();
+ var o = new Sub();
+console.log(o.ultraProp); // true
+{% endhighlight %}
+
+Prototype is original of object. <br>
+It is special property of object. <br>
+Saved data in prototype is connected, <br>
+when the constructor `new` makes new object. <br>
+Prototype is chain that connects between object and the other object.
+
+### Inheritance
+
+{% highlight javascript %}
+function Person(name){
+    this.name = name;
+}
+Person.prototype.name=null;
+Person.prototype.introduce = function(){
+    return 'My name is '+this.name; 
+} 
+function Programmer(name){
+    this.name = name;
+}
+Programmer.prototype = new Person();
+Programmer.prototype.coding = function(){
+    return "hello world";
+}
+ var p1 = new Programmer('egoing');
+document.write(p1.introduce()+"<br />"); // My name is egoing
+document.write(p1.coding()+"<br />"); // hello world
+{% endhighlight %}
+
+Programmer inherited Person. <br>
+So, It can use person's method and new own method. <br>
+It is different form of `class Person extends Programmer`
+
+## Standard Built-in Object
+
+JavaScript has built-in object.
+
+	•	Object
+	•	Function
+    •	Array
+    •	String
+    •	Boolean
+    •	Number
+    •	Math
+    •	Date
+    •	RegExp
+
+{% highlight javascript %}
+Array.prototype.rand = function(){
+    var index = Math.floor(this.length*Math.random());
+    return this[index];
+}
+var arr = new Array('seoul','new york','ladarkh','pusan', 'Tsukuba');
+console.log(arr.rand());
+{% endhighlight %}
+
+This code is expansion of array. <br>
+Output of this function is random value in array.
+
+## Expansion of Object
+
+We can make API that all of object approaches by expanding object.
+
+{% highlight javascript %}
+Object.prototype.contain = function(neddle) {
+    for(var name in this){
+        if(this[name] === neddle){
+            return true;
+        }
+    }
+    return false;
+}
+var o = {'name':'egoing', 'city':'seoul'}
+console.log(o.contain('egoing'));
+var a = ['egoing','leezche','grapittie'];
+console.log(a.contain('leezche'));
+{% endhighlight %}
+
+We can make contain method. <br>
+But, this way is bad because of confusion of development. <br>
+if you want to check this property `contain` is function's own property, <br>
+use this `hasOwnProperty(object.what)`
+

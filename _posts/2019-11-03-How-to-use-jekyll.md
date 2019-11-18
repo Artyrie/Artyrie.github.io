@@ -10,7 +10,7 @@ comments: true
 
 ## How to use Jekyll
 <ol>
-<li> Get prompt with Ruby (install Ruty) </li>
+<li> Get prompt with Ruby (install Ruby) </li>
 <li> Clone or download your Jekyll theme </li>
 <li> move it's directory </li>
 <li> enter "bundle install" in prompt </li>
